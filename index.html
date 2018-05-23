@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Pomodoro Timer</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class ="mainBody">
+      <div class="topBtns">
+          <button class="btn btn-default" id="ToDoBtn"><i class="fa fa-list-alt"></i></button>
+          <!-- To Do Modal -->
+          <div id ="toDoModal" class="toDoListModal">
+            <div class="toDoContent">
+                <span class="toDoCloseBtn">&times;</span><br>
+                <h3>My To Do List</h3>
+                <input type="text" id="input" placeholder ="Add item.."class="textInput">
+                <button id="addToDoBtn" class="btn btn-default addBtn">ADD</button>
+                <ul id="myUl"></ul>
+            </div>
+          </div>
+          <!-- END -->
+          <button class="btn btn-default" id="modalBtn"><i class="fa fa-info-circle"></i></button>
+      </div>
+      <!-- About Modal Section -->
+          <div id="simpleModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>Pomodoro Technique</h2>
+            </div>
+            <div class="modal-body">
+                <p> A time management method developed by Francesco Cirillo in the late 1980s.The technique uses a timer to break down work into intervals, traditionally <b>25 minutes in length,separated by short breaks.</b>  These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+                <p>The technique has been widely popularized by dozens of apps and websites providing timers and instructions. Closely related to concepts such as timeboxing and iterative and incremental development used in software design, the method has been adopted in pair programming contexts.</p>
+                <span><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">READ MORE</a></span>
+            </div>      
+          </div>
+          </div>
+        <!-- End of Modal Section -->
+        <h1 class="header">Pomodor&#x1f345; Timer</h1>
+        <!-- Center Circle -->
+        <div class="circle">
+          <div id="status">Session Time</div>
+          <div id="timeDisplay">25:00</div>
+          <button id="playPauseBtn" class="btn btn-primary "><i class="fa fa-play"></i></button>
+        </div>
+        <!--Settings  -->
+        <div class="session">
+            <p>Session</p>
+            <div class="sessionBtns">
+              <button id="sessionMinus" class="btn btn-default"><i class="fa fa-minus"></i></button>
+              <span id="session-counter"> 25 </span>
+              <button id="sessionAdd" class="btn btn-default"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="break">
+            <p>Break</p>
+            <div class="breakBtns">
+              <button id="breakMinus" class="btn btn-default"><i class="fa fa-minus"></i></button>
+              <span id="break-counter"> 5 </span>
+              <button id="breakAdd" class="btn btn-default"><i class="fa fa-plus"></i></button>
+            </div> 
+       </div>
+       <!-- RESET button -->
+       <button class="btn btn-default resetBtn">RESET</button>
+       <!-- Status Message -->
+       <p class="statusMessage">"Do something wonderful today."</p>
+       <audio id="buzzer" src="https://notificationsounds.com/soundfiles/f4be00279ee2e0a53eafdaa94a151e2c/file-sounds-1080-cheerful-2.mp3"></audio>
+      
+  </div>
+
+<footer>
+  <p>Coded by <a href="https://github.com/MayDeypalubos">May Deypalubos</a> &copy;2018.</p>
+</footer>
+
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script> -->
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
